@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://keybase.io/_/api/1.0/user/lookup.json?username=foofoofooofo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Sun, 16 Mar 2014 17:54:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '283'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - guest=lgHZIGQ5YTA1MWQ4NzFmM2NhMzkwZTQ5ODUyMzY2ZTUwYzA4zlMl5U3OAAFRgMDEIP3M%2Bj0OVhyf7bNQncqgtKT3fQNEQLivBYAeqSHi3vgg;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Sun, 16 Mar 2014 18:04:26
+        GMT; HttpOnly; Secure
+      Etag:
+      - "\"1066671616\""
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 205,
+            "desc": "user not found foofoofooofo",
+            "name": "NOT_FOUND"
+          },
+          "guest_id": "d9a051d871f3ca390e49852366e50c08",
+          "csrf_token": "lgHZIGQ5YTA1MWQ4NzFmM2NhMzkwZTQ5ODUyMzY2ZTUwYzA4zlMl5U3OAAFRgMDEIBtOX1pI1pnSiI+0op+vru11ag2myj2lQotitpFvXj/1"
+        }
+    http_version: 
+  recorded_at: Sun, 16 Mar 2014 17:54:28 GMT
+recorded_with: VCR 2.8.0
