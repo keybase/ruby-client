@@ -1,6 +1,10 @@
-module Keybase
-  
-  API_BASE_URL = 'keybase.io/_/api/1.0'
-  
-  require_relative 'requests/lookup'
+require 'faraday'
+require 'json'
+
+module Keybase 
+  require_relative 'keybase/error'
+  require_relative 'keybase/models/user'
+  require_relative 'keybase/request/base'
+  require_relative 'keybase/request/user/lookup'
+  require_relative 'keybase/response'
 end
