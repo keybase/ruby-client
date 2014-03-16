@@ -21,5 +21,21 @@ module Keybase
       end      
     end
     
+    def test_username_missing
+      VCR.use_cassette('user_lookup_missing') do
+        assert_raise_with_message(Keybase::InputError, 'missing or invalid input. username: missing name') do
+          @user = User.lookup('')  
+        end
+      end      
+    end
+    
+    def test_username_invalid
+      VCR.use_cassette('user_lookup_invalid') do
+        assert_raise_with_message(Keybase::InputError, 'missing or invalid input. username: invalid name') do
+          @user = User.lookup('d8dw9sfu83u39229i9fewdsi0-fdsii-i')  
+        end
+      end      
+    end
+    
   end
 end
