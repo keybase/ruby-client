@@ -1,5 +1,3 @@
-class Keybase
-  def self.hello
-    puts "Hello"
-  end
+module Keybase
+
 end
