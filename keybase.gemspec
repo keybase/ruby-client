@@ -11,5 +11,5 @@ Gem::Specification.new do |gem|
   gem.license = 'BSD-3-Clause'
   
   # Dependencies
-  gem.add_dependency 'scrypt'
+  gem.add_runtime_dependency 'scrypt', '~> 1.2', '>= 1.2.1'
 end

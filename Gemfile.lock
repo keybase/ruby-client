@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     keybase (0.0.0)
-      scrypt
+      scrypt (~> 1.2, >= 1.2.1)
 
 GEM
   remote: https://rubygems.org/
