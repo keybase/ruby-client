@@ -9,4 +9,7 @@ Gem::Specification.new do |gem|
   gem.files = `git ls-files`.split("\n")
   gem.homepage = 'https://github.com/keybase/ruby-client'
   gem.license = 'BSD-3-Clause'
+  
+  # Dependencies
+  gem.add_dependency 'scrypt'
 end
