@@ -9,7 +9,7 @@ module Keybase
       end
     end
     
-    def test_request_returns_user_hash
+    def test_user_object_has_expected_fields
       assert @user.respond_to? :id
     end
     
