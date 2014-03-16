@@ -7,7 +7,7 @@ module Keybase
     end
     
     def self.error_with_fields(status)
-      "#{status['desc']}. #{status['fields'].map{|k,v| "#{k.to_s}: #{v}"}}"
+      "#{status['desc']}. #{status['fields'].map{|k,v| "#{k.to_s}: #{v.to_s}"}.join(',')}"
     end
   end
   
