@@ -18,7 +18,6 @@ Gem::Specification.new do |gem|
   
   # Development Dependencies
   gem.add_development_dependency 'vcr', '~> 2.8.0', '>= 2.8.0'
-  gem.add_development_dependency 'mocha', '~> 1.0.0', '>= 1.0.0'
   gem.add_development_dependency 'webmock', '~> 1.8.0', '>= 1.8.0'
-  gem.add_development_dependency 'minitest', '~> 5.3.1', '>= 5b.3.1'
+  gem.add_development_dependency 'minitest', '~> 5.3.1', '>= 5.3.1'
 end
