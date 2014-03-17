@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.homepage = 'https://github.com/keybase/ruby-client'
   gem.license = 'BSD-3-Clause'
   
-  gem.required_ruby_version = '>= 1.9.3'
+  gem.required_ruby_version = '>= 2.1.0'
   
   # Runtime Dependencies
   gem.add_runtime_dependency 'scrypt', '~> 1.2', '>= 1.2.1'
