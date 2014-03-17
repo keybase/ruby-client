@@ -1,5 +1,6 @@
 require_relative '../lib/keybase'
 
-require 'test/unit'
 require 'rubygems'
-require 'mocha/test_unit'
+gem 'mocha'
+require 'minitest/unit'
+require 'mocha/mini_test'

@@ -1,7 +1,7 @@
 require_relative '../../../../test_helper'
 
 module Keybase
-  class UserTest < Test::Unit::TestCase
+  class UserTest < Minitest::Test
 
   end
 end

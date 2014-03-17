@@ -1,7 +1,7 @@
 module Keybase
   require_relative '../../../test_helper'
   
-  class ResponseTest < Test::Unit::TestCase
+  class ResponseTest < Minitest::Test
     def setup
       @response = Object.new
       @response.stubs(body: {'status' => {'code' => 0, 'desc' => 'all fine'}}.to_json)
@@ -13,7 +13,7 @@ module Keybase
     
     def test_raises_user_not_found
       @response.stubs(body: {'status' => {'code' => 205, 'desc' => 'User not found'}}.to_json)
-      assert_raise_with_message(Keybase::UserNotFoundError, 'User not found') do
+      assert_raises(Keybase::UserNotFoundError, 'User not found') do
         Response.new(@response) 
       end
     end

@@ -18,6 +18,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     metaclass (0.0.4)
+    minitest (5.3.1)
     mocha (1.0.0)
       metaclass (~> 0.0.1)
     multipart-post (2.0.0)
@@ -36,6 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   keybase!
+  minitest (~> 5.3.1, >= 5.3.1)
   mocha (~> 1.0.0, >= 1.0.0)
   vcr (~> 2.8.0, >= 2.8.0)
   webmock (~> 1.8.0, >= 1.8.0)

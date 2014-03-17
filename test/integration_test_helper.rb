@@ -1,7 +1,6 @@
 require_relative '../lib/keybase'
 
-require 'bundler/setup'
-require 'test/unit'
+require "minitest/autorun"
 require 'vcr'
 
 VCR.configure do |c|

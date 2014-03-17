@@ -2,7 +2,7 @@ module Keybase
   require_relative '../../../../test_helper'
   
   module Request
-    class RequestBaseTest < Test::Unit::TestCase
+    class RequestBaseTest < Minitest::Test
       
       def setup
         @url = "foo"
