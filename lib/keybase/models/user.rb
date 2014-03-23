@@ -25,10 +25,8 @@ module Keybase
       # The parameters r, p, and buflen* must satisfy r * p < 2^30 and buflen <= (2^32 - 1) * 32.
       n, r, p, klen = 2**15, 8, 1, 224
       pwh = SCrypt::Engine.scrypt(passphrase, salt, n, r, p, klen)
-      digest = OpenSSL::Digest::SHA512.new
-      hmac_pwh = OpenSSL::HMAC.hexdigest(digest, pwh, Base64.decode64(login_session))
+      hmac_pwh = OpenSSL::HMAC.hexdigest(OpenSSL::Digest::SHA512.new, pwh, Base64.decode64(login_session))
       result = Request::Root.login(email_or_username, hmac_pwh, login_session)
-      puts result
     end
     
     private
