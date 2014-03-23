@@ -17,6 +17,7 @@ module Keybase
         @@conn ||= Faraday.new(:url => API_BASE_URL) do |faraday|
           faraday.path_prefix = "/_/api/1.0"
           faraday.request  :url_encoded
+          faraday.use :cookie_jar
           # faraday.response :logger
           faraday.adapter  Faraday.default_adapter
         end
