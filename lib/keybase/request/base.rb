@@ -7,6 +7,10 @@ module Keybase
         Keybase::Response.new(conn.get(url, params)).body
       end
       
+      def self.post(url, params={})
+        Keybase::Response.new(conn.post(url, params)).body
+      end
+      
       private
       
       def self.conn
