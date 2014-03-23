@@ -18,13 +18,15 @@ module Keybase
   
   class UserNotFoundError < StandardError; end
   class InputError < StandardError; end
+  class BadPasswordError < StandardError; end
   
   private
     
   def self.errors
     {
       100 => InputError,
-      205 => UserNotFoundError
+      205 => UserNotFoundError,
+      204 => BadPasswordError
     }
   end 
 end
