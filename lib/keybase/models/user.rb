@@ -21,12 +21,12 @@ module Keybase
 
     def self.login(email_or_username, passphrase)
       salt, login_session = Request::Root.get_salt_and_login_session(email_or_username)
-      # pwh = scrypt(passphrase, hex2bin(salt), N=2^15, r=8, p=1, dkLen=224)[192:224]
-      # The parameters r, p, and buflen* must satisfy r * p < 2^30 and buflen <= (2^32 - 1) * 32.
       n, r, p, klen = 2**15, 8, 1, 224
-      pwh = SCrypt::Engine.scrypt(passphrase, salt, n, r, p, klen)[192..-1]
+      pwh = SCrypt::Engine.scrypt(passphrase, [salt].pack("H*"), n, r, p, klen)[192..-1]
       hmac_pwh = OpenSSL::HMAC.hexdigest(OpenSSL::Digest::SHA512.new, pwh, Base64.decode64(login_session))
-      result = Request::Root.login(email_or_username, hmac_pwh, login_session)
+      response = Request::Root.login(email_or_username, hmac_pwh, login_session)
+      
+      return response['session'], new(response['me'])
     end
     
     private
