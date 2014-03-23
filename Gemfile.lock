@@ -25,9 +25,9 @@ GEM
       ffi-compiler (>= 0.0.2)
       rake
     vcr (2.8.0)
-    webmock (1.17.4)
+    webmock (1.8.11)
       addressable (>= 2.2.7)
-      crack (>= 0.3.2)
+      crack (>= 0.1.7)
 
 PLATFORMS
   ruby
@@ -36,4 +36,4 @@ DEPENDENCIES
   keybase!
   minitest (>= 5.3.1)
   vcr (>= 2.8.0)
-  webmock (>= 1.8.0)
+  webmock (~> 1.8.0)
