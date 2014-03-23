@@ -1,5 +1,4 @@
-require 'simplecov'
-SimpleCov.start
+SimpleCov.start if require 'simplecov'
 
 require_relative '../lib/keybase'
 
