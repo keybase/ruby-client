@@ -21,18 +21,14 @@ module Keybase
 
     def self.login(email_or_username, passphrase)
       salt, login_session = Request::Root.get_salt_and_login_session(email_or_username)
-      # pwh = scrypt(passphrase, hex2bin(salt), N=215, r=8, p=1, dkLen=224)[192:224]
+      # pwh = scrypt(passphrase, hex2bin(salt), N=2^15, r=8, p=1, dkLen=224)[192:224]
       # The parameters r, p, and buflen* must satisfy r * p < 2^30 and buflen <= (2^32 - 1) * 32.
       n, r, p, klen = 2**15, 8, 1, 224
-      cost = "#{n}$#{r}$#{p}$"
-      salt = "#{cost}#{salt}"
       pwh = SCrypt::Engine.scrypt(passphrase, salt, n, r, p, klen)
-      digest = OpenSSL::Digest.new('sha512')
+      digest = OpenSSL::Digest::SHA512.new
       hmac_pwh = OpenSSL::HMAC.hexdigest(digest, pwh, Base64.decode64(login_session))
-      puts hmac_pwh
-      puts login_session
-      #result = Request::Root.login(email_or_username, hmac_pwh, login_session)
-     # puts result
+      result = Request::Root.login(email_or_username, hmac_pwh, login_session)
+      puts result
     end
     
     private
@@ -73,5 +69,6 @@ module Keybase
         @private_keys.send("#{k}=".to_sym, OpenStruct.new(v))
       end      
     end
+
   end
 end
