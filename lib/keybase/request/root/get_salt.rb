@@ -1,4 +1,4 @@
-# GET /user/lookup.json?username=USERNAME
+# GET /getsalt.json?email_or_username=EMAIL_OR_USERNAME
 module Keybase
   module Request
     class Root < Base

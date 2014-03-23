@@ -1,4 +1,7 @@
-# GET /user/lookup.json?username=USERNAME
+# POST /login.json
+# email_or_username: "chris"
+# hmac_pwh:          "38902fe098f..."
+# login_session:     "lgHZIwfee99..."
 module Keybase
   module Request
     class Root < Base
