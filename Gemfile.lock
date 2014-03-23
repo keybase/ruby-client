@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     keybase (0.0.0)
-      faraday (>= 0.9.0)
-      scrypt (>= 1.2.1)
+      faraday (~> 0.9.0)
+      scrypt (~> 1.2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -34,6 +34,6 @@ PLATFORMS
 
 DEPENDENCIES
   keybase!
-  minitest (>= 5.3.1)
-  vcr (>= 2.8.0)
+  minitest (~> 5.3.1)
+  vcr (~> 2.8.0)
   webmock (~> 1.8.0)
