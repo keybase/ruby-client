@@ -1,7 +1,3 @@
-require_relative '../lib/keybase'
-
-gem "minitest"
-require "minitest/autorun"
 require 'vcr'
 
 VCR.configure do |c|

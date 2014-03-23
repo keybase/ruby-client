@@ -1,3 +1,4 @@
+require_relative '../test_helper'
 require_relative '../integration_test_helper'
 
 module Keybase
