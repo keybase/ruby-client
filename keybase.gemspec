@@ -13,11 +13,11 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 2.1.0'
   
   # Runtime Dependencies
-  gem.add_runtime_dependency 'scrypt', '~> 1.2', '>= 1.2.1'
-  gem.add_runtime_dependency 'faraday', '~> 0.9.0', '>= 0.9.0'
+  gem.add_runtime_dependency 'scrypt', '>= 1.2.1'
+  gem.add_runtime_dependency 'faraday', '>= 0.9.0'
   
   # Development Dependencies
-  gem.add_development_dependency 'vcr', '~> 2.8.0', '>= 2.8.0'
-  gem.add_development_dependency 'webmock', '~> 1.8.0', '>= 1.8.0'
-  gem.add_development_dependency 'minitest', '~> 5.3.1', '>= 5.3.1'
+  gem.add_development_dependency 'vcr', '>= 2.8.0'
+  gem.add_development_dependency 'webmock', '>= 1.8.0'
+  gem.add_development_dependency 'minitest', '>= 5.3.1'
 end
