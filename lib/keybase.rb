@@ -1,5 +1,6 @@
 require 'faraday'
 require 'json'
+require 'date'
 
 module Keybase 
   require_relative 'keybase/error'
