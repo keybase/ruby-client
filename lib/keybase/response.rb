@@ -8,7 +8,7 @@ module Keybase
       begin
         Error.raise_unless_successful(@body['status'])
       rescue
-        STDERR.puts @body
+        STDERR.puts @body unless TEST_ENV
         raise
       end
       @body
