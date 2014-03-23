@@ -1,4 +1,5 @@
 require_relative '../lib/keybase'
 
 require 'rubygems'
-require 'minitest/unit'
+gem "minitest"
+require 'minitest/autorun'
