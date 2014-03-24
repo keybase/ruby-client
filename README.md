@@ -13,7 +13,7 @@ gem install keybase
 or
 
 (in Gemfile or .gemspec)
-```
+```ruby
 gem 'keybase'
 ```
 
