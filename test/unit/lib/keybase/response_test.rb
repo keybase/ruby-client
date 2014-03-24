@@ -3,7 +3,7 @@ module Keybase
   
   class ResponseTest < Minitest::Test
     def setup
-      @response = OpenStruct.new(body: nil)
+      @response = OpenStruct.new(body: nil, headers: {})
     end
     
     def test_does_not_raise

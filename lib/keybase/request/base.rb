@@ -8,16 +8,19 @@ module Keybase
       end
       
       def self.post(url, params={})
-        Keybase::Response.new(conn.post(url, params)).body
+        response = Keybase::Response.new(conn.post(url, params))
+        TokenStore.cookie = response.cookie if response.cookie
+        response.body
       end
       
       private
       
       def self.conn
-        @@conn ||= Faraday.new(:url => API_BASE_URL) do |faraday|
+        Faraday.new(:url => API_BASE_URL) do |faraday|
           faraday.path_prefix = "/_/api/1.0"
           faraday.request  :url_encoded
-          faraday.use :cookie_jar
+          faraday.headers['Cookie'] = TokenStore.cookie if TokenStore.cookie
+          faraday.headers['X-CSRF-Token'] = TokenStore.csrf if TokenStore.csrf
           # faraday.response :logger
           faraday.adapter  Faraday.default_adapter
         end
