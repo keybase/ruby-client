@@ -31,6 +31,18 @@ module Keybase
       Request::Sig.post_auth(basics.username, sig)
     end
     
+    def add_public_key(key)
+      Request::Key.add(key, nil)
+    end
+    
+    def add_private_key(key)
+      Request::Key.add(nil, key)
+    end
+    
+    def add_key_pair(public_key, private_key)
+      Request::Key.add(public_key, private_key)
+    end
+    
     private
     
     def set_basics(params)
