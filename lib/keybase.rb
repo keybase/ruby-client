@@ -7,6 +7,7 @@ require 'base64'
 require 'faraday-cookie_jar'
 
 module Keybase 
+  require_relative 'keybase/token_store'
   require_relative 'keybase/error'
   require_relative 'keybase/models/user'
   require_relative 'keybase/request/base'
