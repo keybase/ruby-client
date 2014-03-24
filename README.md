@@ -39,7 +39,9 @@ me.private_keys.primary.kid #=> "a140c70404a13370f7..."
 
 ### Key Add
 
-An uploaded public key should be an armored PGP key. An uploaded private key should be in [P3SKB](https://keybase.io/__/api-docs/1.0#p3skb-format) format. You can upload both at the same time, or the private after the public, but you can't upload the private before the public.
+An uploaded public key should be an armored PGP key. An uploaded private key should be in [P3SKB](https://keybase.io/__/api-docs/1.0#p3skb-format) format.
+
+Note: You can't upload the private before the public.
 
 ```ruby
 me.add_public_key("-----BEGIN PGP PUBLIC...") 
