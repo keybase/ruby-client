@@ -20,6 +20,7 @@ module Keybase
   class InputError < StandardError; end
   class BadPasswordError < StandardError; end
   class BadSessionError < StandardError; end
+  class CSRFVerificationError < StandardError; end
   
   private
     
@@ -28,7 +29,8 @@ module Keybase
       100 => InputError,
       202 => BadSessionError,
       205 => UserNotFoundError,
-      204 => BadPasswordError
+      204 => BadPasswordError,
+      222 => CSRFVerificationError
     }
   end 
 end
