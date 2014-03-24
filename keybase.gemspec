@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.date = '2013-10-25'
   gem.summary = 'keybase'
   gem.description = 'CLI for keybase.io'
-  gem.authors = [ 'Max Krohn' ]
+  gem.authors = [ 'Max Krohn', 'Sean Handley' ]
   gem.email = 'themax@gmail.com'
   gem.files = `git ls-files`.split("\n")
   gem.homepage = 'https://github.com/keybase/ruby-client'
