@@ -48,14 +48,14 @@ me.add_private_key("hKRib2R5gqRwcml2gqRkY...")
 me.revoke_key("a140c70404a13370f7...") #=> true
 ```
 
-### Signature post auth
+### Signature Post Auth
 
 ```ruby
 me.post_auth('----- BEGIN PGP MESSAGE ----- ...')
 #=> "fd2667b9b396150603ea0b567eaf3334c3..." (auth_token)
 ```
 
-### Get user information
+### Get User Information
 
 ```ruby
 user = Keybase.lookup('username')
