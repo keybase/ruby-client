@@ -21,9 +21,8 @@ module Keybase
 
     def self.login(email_or_username, passphrase)
       salt, login_session = Request::Root.get_salt_and_login_session(email_or_username)
-      n, r, p, klen = 2**15, 8, 1, 224
-      pwh = SCrypt::Engine.scrypt(passphrase, [salt].pack("H*"), n, r, p, klen)[192..-1]
-      hmac_pwh = OpenSSL::HMAC.hexdigest(OpenSSL::Digest::SHA512.new, pwh, Base64.decode64(login_session))
+      pwh = Crypto.scrypt(passphrase, [salt].pack("H*"))
+      hmac_pwh = Crypto.hmac_sha512(pwh, Base64.decode64(login_session))
       response = Request::Root.login(email_or_username, hmac_pwh, login_session)
       return new(response['me'])
     end
