@@ -1,6 +1,6 @@
 # ruby-client
 
-CLI for keybase.io written for/in Ruby
+CLI for [keybase.io](https://keybase.io) written for/in Ruby
 
 [![Build Status](https://secure.travis-ci.org/seanhandley/ruby-client.png?branch=master)](http://travis-ci.org/seanhandley/ruby-client)
 
@@ -27,6 +27,10 @@ require 'keybase'
 
 ### Login
 
+Upon login, you'll get back a user object. Your user object is a large dictionary and contains pretty much everything about you and your account. (See the [user objects](https://keybase.io/__/api-docs/1.0#user-objects) page in the API documentation for more info.)
+
+The login will also create a session which allows the authenticated actions: `key/add`, `key/revoke`, `sig/post_auth`
+
 ```ruby
 me = Keybase.login('chris', 'passphrase')
 me.basics.username          #=> "chris"
@@ -34,6 +38,8 @@ me.private_keys.primary.kid #=> "a140c70404a13370f7..."
 ```
 
 ### Key Add
+
+An uploaded public key should be an armored PGP key. An uploaded private key should be in [P3SKB](https://keybase.io/__/api-docs/1.0#p3skb-format) format. You can upload both at the same time, or the private after the public, but you can't upload the private before the public.
 
 ```ruby
 me.add_public_key("-----BEGIN PGP PUBLIC...") 
@@ -44,11 +50,39 @@ me.add_private_key("hKRib2R5gqRwcml2gqRkY...")
 
 ### Key Revoke
 
+Currently, the only acceptable type of revocation is a simple delete, which means you just delete the key from Keybase. It's technically not a revocation at all. In the near future, you will be able to post revocations to the server, too
+
 ```ruby
 me.revoke_key("a140c70404a13370f7...") #=> true
 ```
 
 ### Signature Post Auth
+
+Post a self-signed authentication certificate, so that future attempts to load a user session can succeed.
+
+The payload of the signature should take the form of other keybase signatures, like self-signing keys, or proving ownership of remote accounts. An example looks like:
+
+```json
+{
+    "body": {
+        "key": {
+            "fingerprint": "da99a6ebeca98b14d944cb6e1ca9bfeab344f0fc",
+            "host": "keybase.io",
+            "key_id": "1ca9bfeab344f0fc",
+            "uid": "15a9e2826313eaf005291a1ae00c3f00",
+            "username": "taco422107"
+        },
+        "nonce": null,
+        "type": "auth",
+        "version": 1
+    },
+    "ctime": 1386537779,
+    "expire_in": 86400,
+    "tag": "signature"
+}
+```
+
+The client can provide an optional nonce to randomize the signatures. The server will check the signature for validatity, and on success, will return an auth_token, which is the SHA-256 hash of the full signature body, from the "---- BEGIN" all the through the ---- END PGP MESSAGE ----.
 
 ```ruby
 me.post_auth('----- BEGIN PGP MESSAGE ----- ...')
@@ -56,6 +90,8 @@ me.post_auth('----- BEGIN PGP MESSAGE ----- ...')
 ```
 
 ### Get User Information
+
+A user object is a large dictionary and contains pretty much everything about a user that you have access to. 
 
 ```ruby
 user = Keybase.lookup('username')
