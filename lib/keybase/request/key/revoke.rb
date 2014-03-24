@@ -6,6 +6,7 @@ module Keybase
     class Key < Base
       def self.revoke(kid)
         post('key/revoke.json', revocation_type: 0, kid: kid)
+        true
       end
     end
   end

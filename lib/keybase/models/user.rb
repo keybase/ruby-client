@@ -32,15 +32,15 @@ module Keybase
     end
     
     def add_public_key(key)
-      Request::Key.add(key, nil)
+      Request::Key.add(public_key: key)
     end
     
     def add_private_key(key)
-      Request::Key.add(nil, key)
+      Request::Key.add(private_key: key)
     end
     
-    def add_key_pair(public_key, private_key)
-      Request::Key.add(public_key, private_key)
+    def revoke_key(kid)
+      Request::Key.revoke(kid)
     end
     
     private
