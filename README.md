@@ -27,8 +27,8 @@ require 'keybase'
 
 Keybase is two things.
 
-1) A public, publicly-auditable directory of keys and identity proofs.
-2) A protocol for accessing the directory.
+1. A public, publicly-auditable directory of keys and identity proofs.
+2. A protocol for accessing the directory.
 
 ### Login
 
