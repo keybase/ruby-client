@@ -4,9 +4,7 @@ CLI for [keybase.io](https://keybase.io) written for/in Ruby
 
 [![Build Status](https://secure.travis-ci.org/seanhandley/ruby-client.png?branch=master)](http://travis-ci.org/seanhandley/ruby-client)
 
-## Usage
-
-### Install
+## Installing
 
 ```
 gem install keybase
@@ -24,6 +22,8 @@ then
 ```ruby
 require 'keybase'
 ````
+
+## Usage
 
 ### Login
 
