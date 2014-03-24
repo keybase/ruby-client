@@ -1,6 +1,6 @@
-# ruby-client
+# Keybase Gem
 
-CLI for [keybase.io](https://keybase.io) written for/in Ruby
+API client gem for [keybase.io](https://keybase.io).
 
 [![Build Status](https://secure.travis-ci.org/seanhandley/ruby-client.png?branch=master)](http://travis-ci.org/seanhandley/ruby-client)
 
@@ -52,7 +52,7 @@ me.add_private_key("hKRib2R5gqRwcml2gqRkY...")
 
 ### Key Revoke
 
-Currently, the only acceptable type of revocation is a simple delete, which means you just delete the key from Keybase. It's technically not a revocation at all. In the near future, you will be able to post revocations to the server, too
+Currently, the only acceptable type of revocation is a simple delete, which means you just delete the key from Keybase. It's technically not a revocation at all. In the near future, you will be able to post revocations to the server, too.
 
 ```ruby
 me.revoke_key("a140c70404a13370f7...") #=> true
@@ -62,7 +62,9 @@ me.revoke_key("a140c70404a13370f7...") #=> true
 
 Post a self-signed authentication certificate, so that future attempts to load a user session can succeed.
 
-The payload of the signature should take the form of other keybase signatures, like self-signing keys, or proving ownership of remote accounts. An example looks like:
+The payload of the signature should take the form of other keybase signatures, like self-signing keys, or proving ownership of remote accounts.
+
+An example looks like:
 
 ```json
 {
@@ -84,7 +86,7 @@ The payload of the signature should take the form of other keybase signatures, l
 }
 ```
 
-The client can provide an optional nonce to randomize the signatures. The server will check the signature for validatity, and on success, will return an auth_token, which is the SHA-256 hash of the full signature body, from the "---- BEGIN" all the through the ---- END PGP MESSAGE ----.
+The client can provide an optional nonce to randomize the signatures. The server will check the signature for validatity, and on success, will return an auth_token, which is the SHA-256 hash of the full signature body, from the "---- BEGIN" through to the ---- END PGP MESSAGE ----.
 
 ```ruby
 me.post_auth('----- BEGIN PGP MESSAGE ----- ...')
@@ -93,7 +95,7 @@ me.post_auth('----- BEGIN PGP MESSAGE ----- ...')
 
 ### Get User Information
 
-A user object is a large dictionary and contains pretty much everything about a user that you have access to. 
+A user object is a large dictionary (wrapped as a Ruby object) and contains pretty much everything about a user that you have access to. 
 
 ```ruby
 user = Keybase.lookup('username')
@@ -113,6 +115,8 @@ user.public_keys.primary.updated_at
 
 ### Dumps
 
+Dumps represent a history of the public dumps of the site. You can use it to track or mirror the site as you wish. If you have a previous dump of the site, you can apply changes to sync up without downloading the entire site.
+
 ```ruby
 dump = Keybase.dump_latest
 dump.full_data_sha256
@@ -122,3 +126,7 @@ dump.changes_from_parent
 
 dumps = Keybase.dump_all #=> [#<Keybase::Dump:0x00000102584280...]
 ```
+
+## Further Reading
+
+Please check out the [Keybase API Documentation](https://keybase.io/__/api-docs/1.0) for a comprehensive explanation of the API and its capabilities.
