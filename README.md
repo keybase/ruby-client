@@ -25,6 +25,11 @@ require 'keybase'
 
 ## Usage
 
+Keybase is two things.
+
+1) A public, publicly-auditable directory of keys and identity proofs.
+2) A protocol for accessing the directory.
+
 ### Login
 
 Upon login, you'll get back a user object. Your user object is essentially a large dictionary (wrapped as a Ruby object) and contains pretty much everything about you and your account. (See the [user objects](https://keybase.io/__/api-docs/1.0#user-objects) page in the API documentation for more info.)
