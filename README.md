@@ -2,7 +2,7 @@
 
 API client gem for [keybase.io](https://keybase.io).
 
-[![Build Status](https://secure.travis-ci.org/seanhandley/ruby-client.png?branch=master)](http://travis-ci.org/seanhandley/ruby-client)
+[![Build Status](https://secure.travis-ci.org/seanhandley/keybase.png?branch=master)](http://travis-ci.org/seanhandley/keybase)
 
 ## Installing
 
