@@ -3,7 +3,7 @@ module Keybase
   module Request
     class Dump < Base
       def self.latest
-        get('dump/latest.json', {})
+        get('dump/latest.json', {})['dump']
       end
     end
   end
