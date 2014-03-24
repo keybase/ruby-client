@@ -6,7 +6,7 @@ module Keybase
     class Sig < Base
       def self.post_auth(email_or_username, sig)
         post('sig/post_auth.json', email_or_username: email_or_username,
-                                   sig: sig)
+                                   sig: sig, csrf_token: TokenStore.csrf)
       end
     end
   end

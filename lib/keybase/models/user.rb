@@ -25,8 +25,11 @@ module Keybase
       pwh = SCrypt::Engine.scrypt(passphrase, [salt].pack("H*"), n, r, p, klen)[192..-1]
       hmac_pwh = OpenSSL::HMAC.hexdigest(OpenSSL::Digest::SHA512.new, pwh, Base64.decode64(login_session))
       response = Request::Root.login(email_or_username, hmac_pwh, login_session)
-      
-      return response['session'], new(response['me'])
+      return new(response['me'])
+    end
+    
+    def post_auth(sig)
+      Request::Sig.post_auth(basics.username, sig)
     end
     
     private
