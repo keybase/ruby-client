@@ -4,7 +4,6 @@ require 'date'
 require 'scrypt'
 require 'openssl'
 require 'base64'
-require 'faraday-cookie_jar'
 
 module Keybase 
   require_relative 'keybase/crypto'
