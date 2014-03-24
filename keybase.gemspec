@@ -15,7 +15,6 @@ Gem::Specification.new do |gem|
   # Runtime Dependencies
   gem.add_runtime_dependency 'scrypt', '~> 1.2.1'
   gem.add_runtime_dependency 'faraday', '~> 0.9.0'
-  gem.add_runtime_dependency 'faraday-cookie_jar', '~> 0.0.6'
   
   # Development Dependencies
   gem.add_development_dependency 'vcr', '~> 2.8.0'
