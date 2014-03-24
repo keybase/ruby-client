@@ -27,9 +27,9 @@ require 'keybase'
 
 ### Login
 
-Upon login, you'll get back a user object. Your user object is a large dictionary and contains pretty much everything about you and your account. (See the [user objects](https://keybase.io/__/api-docs/1.0#user-objects) page in the API documentation for more info.)
+Upon login, you'll get back a user object. Your user object is essentially a large dictionary (wrapped as a Ruby object) and contains pretty much everything about you and your account. (See the [user objects](https://keybase.io/__/api-docs/1.0#user-objects) page in the API documentation for more info.)
 
-The login will also create a session which allows the authenticated actions: `key/add`, `key/revoke`, `sig/post_auth`
+The login will also initiate an ongoing session which allows the authenticated actions: `key/add`, `key/revoke`, `sig/post_auth`
 
 ```ruby
 me = Keybase.login('chris', 'passphrase')
