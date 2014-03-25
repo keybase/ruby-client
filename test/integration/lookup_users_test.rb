@@ -2,7 +2,7 @@ require_relative '../test_helper'
 require_relative '../integration_test_helper'
 
 module Keybase
-  class LookupUsersTest < Minitest::Test
+  class LookupUsersIntegrationTest < Minitest::Test
     
     def setup
       VCR.use_cassette('user_lookup_foo') do
