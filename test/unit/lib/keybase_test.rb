@@ -1,6 +1,6 @@
 module Keybase
   
-  require_relative '../test_helper'
+  require_relative '../../test_helper'
   
   class KeybaseTest < Minitest::Test
     def test_keybase_calls_user_lookup

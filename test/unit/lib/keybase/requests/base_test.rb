@@ -18,6 +18,38 @@ module Keybase
           end
         end
       end
+
+      def test_get_passes_params
+        @mock = MiniTest::Mock.new
+        @mock.expect(:get, @response, ['foo', { 'bar' => 'baz'}])
+        Base.stub :conn, @mock do
+          Keybase::Response.stub :new, @response do
+            Base.get('foo', 'bar' => 'baz')
+          end
+        end
+        @mock.verify
+      end
+
+      def test_post_returns_keybase_response
+        Base.stub :conn, @conn do
+          @conn.stub :post, nil do
+            Keybase::Response.stub :new, @response do
+              assert Base.post('foo', {})
+            end
+          end
+        end
+      end
+      
+      def test_post_passes_params
+        @mock = MiniTest::Mock.new
+        @mock.expect(:post, @response, ['foo', { 'bar' => 'baz'}])
+        Base.stub :conn, @mock do
+          Keybase::Response.stub :new, @response do
+            Base.post('foo', 'bar' => 'baz')
+          end
+        end
+        @mock.verify
+      end
       
       def test_base_url_defined
         assert defined?(API_BASE_URL)
