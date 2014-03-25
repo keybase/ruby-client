@@ -4,6 +4,7 @@ require 'date'
 require 'scrypt'
 require 'openssl'
 require 'base64'
+require 'securerandom'
 
 module Keybase 
   require_relative 'keybase/crypto'
