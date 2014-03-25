@@ -21,7 +21,7 @@ then
 
 ```ruby
 require 'keybase'
-````
+```
 
 ## Usage
 
