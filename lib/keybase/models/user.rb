@@ -32,6 +32,7 @@ module Keybase
     # @param [String] passphrase the passphrase for the account
     # @raise [Keybase::UserNotFoundError] if the user is not found
     # @raise [Keybase::InputError] if the submitted parameters are empty or invalid
+    # @raise [Keybase::BadPasswordError] if the submitted passphrase is incorrect
     # @return [Keybase::Model::User] the user, if login is successful
     def self.login(email_or_username, passphrase)
       salt, login_session = Request::Root.get_salt_and_login_session(email_or_username)
