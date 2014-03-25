@@ -15,7 +15,7 @@ module Keybase
   require_relative 'keybase/request/dump/latest'
   require_relative 'keybase/request/key/add'
   require_relative 'keybase/request/key/revoke'
-  require_relative 'keybase/request/root/get_salt'
+  require_relative 'keybase/request/root/get_salt_and_login_session'
   require_relative 'keybase/request/root/login'
   require_relative 'keybase/request/sig/post_auth'
   require_relative 'keybase/request/user/lookup'
