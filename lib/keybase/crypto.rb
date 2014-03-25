@@ -1,4 +1,5 @@
 module Keybase
+  # @private
   class Crypto
     SCRYPT_VARS = {'N' => 2**15, 'r' => 8, 'p' => 1, 'key_length' => 224, 'chunk' => 192..-1}
     def self.scrypt(passphrase, salt)

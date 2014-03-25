@@ -1,4 +1,5 @@
 module Keybase
+  # @private
   class TokenStore
     
     attr_accessor :csrf, :cookie

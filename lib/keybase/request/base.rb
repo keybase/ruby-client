@@ -1,4 +1,5 @@
 module Keybase
+  # @private
   module Request
     API_BASE_URL = 'https://keybase.io'
     class Base

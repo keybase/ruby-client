@@ -1,4 +1,5 @@
 module Keybase
+  # @private
   class Error < StandardError
     def self.raise_unless_successful(status)
       return if status['code'] == 0

@@ -1,4 +1,5 @@
 module Keybase
+  # @private
   class Response
     
     attr_reader :body, :cookie
