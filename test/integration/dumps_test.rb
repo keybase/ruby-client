@@ -6,8 +6,8 @@ module Keybase
     
     def setup
       VCR.use_cassette('dumps') do
-        @all = Dump.all
-        @latest = Dump.latest
+        @all = Keybase.dump_all
+        @latest = Keybase.dump_latest
       end
     end
     

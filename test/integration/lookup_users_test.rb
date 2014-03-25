@@ -6,7 +6,7 @@ module Keybase
     
     def setup
       VCR.use_cassette('user_lookup_foo') do
-        @user = User.lookup("foo")
+        @user = Keybase.lookup("foo")
       end
     end
     
