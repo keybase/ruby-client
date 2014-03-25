@@ -5,7 +5,8 @@ module Keybase
   module Request
     class Key < Base
       def self.revoke(kid)
-        post('key/revoke.json', revocation_type: 0, kid: kid)
+        post('key/revoke.json', revocation_type: 0,
+             csrf_token: TokenStore.csrf, kid: kid)
         true
       end
     end
