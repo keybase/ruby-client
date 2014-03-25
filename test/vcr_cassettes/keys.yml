@@ -1,0 +1,349 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://keybase.io/_/api/1.0/getsalt.json?email_or_username=seanhandley
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:13:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '428'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - guest=lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOrOAAFRgMDEIMcmWtgZM2v6SINeM1mHM2ENBaRJ1pMgal2RoZTfG3g4;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:23:19
+        GMT; HttpOnly; Secure
+      Expires:
+      - "-1"
+      Cache-Control:
+      - must-revalidate, private
+      Etag:
+      - "\"-710146707\""
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "guest_id": "5a030ffe197b209e60360ada883e0a08",
+          "salt": "a64952fa509406dcd9b3b26b696ab5d0",
+          "login_session": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvNASzAxCBXef2elgTdSh0qDnWmP0DxG1myAwzj776P6kZIwvmyaQ==",
+          "pwh_version": 3,
+          "csrf_token": "lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOvOAAFRgMDEIN9EVcSYlQT55aj+cnieTT8YhPYszpo0trf8xN1XXepy"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:13:41 GMT
+- request:
+    method: post
+    uri: https://keybase.io/_/api/1.0/login.json
+    body:
+      encoding: UTF-8
+      string: email_or_username=seanhandley&hmac_pwh=318b837e0a489d98caf5bdcb9789f8d8d3701e7cc9c178cbe7f5209dbee0887ef8ae8dfc5bd35c9b0445dc24bf8f25014bb0ad23d8d5fc4ee01af6d2cb7f588a&login_session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvNASzAxCBXef2elgTdSh0qDnWmP0DxG1myAwzj776P6kZIwvmyaQ%3D%3D
+    headers:
+      X-Csrf-Token:
+      - lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOvOAAFRgMDEIN9EVcSYlQT55aj+cnieTT8YhPYszpo0trf8xN1XXepy
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:13:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '14298'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - guest=lgHZIDI1ZmRlMjZhZGQ5ZTZjNzNlOWQ2Yzg4NmVjN2M3MjA4zlMxgOvOAAFRgMDEID27s4G4rgbr7Q8kINyCbeDXMR3Tk1H%2BEOKFkrsRGnJN;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:23:20
+        GMT; HttpOnly; Secure
+      - session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvOAeEzgNkgNjkxYzlmOWI0ODA2N2IxM2JjN2I5ZDBmMTBlOGE2MDLEIJmFmQo450P8iz0TItrkA33%2Frtwyt9rhdcmpSYjxZ2h4;
+        Max-Age=31536000; Domain=.keybase.io; Path=/; Expires=Wed, 25 Mar 2015 13:13:15
+        GMT; HttpOnly; Secure
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "guest_id": "25fde26add9e6c73e9d6c886ec7c7208",
+          "session": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvOAeEzgNkgNjkxYzlmOWI0ODA2N2IxM2JjN2I5ZDBmMTBlOGE2MDLEIJmFmQo450P8iz0TItrkA33/rtwyt9rhdcmpSYjxZ2h4",
+          "uid": "e720f5a4cce9c60f94538d30959e7100",
+          "me": {
+            "id": "secret",
+            "basics": {
+              "username": "seanhandley",
+              "ctime": 1394719469,
+              "mtime": 1394719469,
+              "id_version": 15,
+              "track_version": 9,
+              "last_id_change": 1395753115,
+              "salt": "secret"
+            },
+            "invitation_stats": {
+              "available": 0,
+              "used": 8,
+              "power": 8,
+              "open": 0
+            },
+            "profile": {
+              "mtime": 1394830113,
+              "full_name": "Sean Handley",
+              "location": "Manchester, UK",
+              "bio": "I use open source languages, technologies and systems to solve problems."
+            },
+            "emails": {
+              "primary": {
+                "email": "dude@testing.com",
+                "is_verified": 1
+              }
+            },
+            "public_keys": {
+              "primary": {
+                "kid": "01015a75e5b8d15966f3517327e1b6cef98bc8316d9f688964315769f57dd6f2437a0a",
+                "key_type": 1,
+                "bundle": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v0.1.1\nComment: https://keybase.io/crypto\n\n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\n=l2sl\n-----END PGP PUBLIC KEY BLOCK-----",
+                "mtime": 1395753115,
+                "ctime": 1395753115,
+                "ukbid": "8419e4f4db3e3debc101959652ddc611",
+                "key_fingerprint": "3d5a1e2c0f9d2ec2c5f67afe07ab1775ef126f8d"
+              }
+            },
+            "private_keys": {
+              "primary": {
+                "kid": "01015a75e5b8d15966f3517327e1b6cef98bc8316d9f688964315769f57dd6f2437a0a",
+                "key_type": 2,
+                "bundle": "secret",
+                "mtime": 1395753115,
+                "ctime": 1395753115
+              }
+            },
+            "sigs": {
+              "last": {
+                "sig_id": "secret",
+                "seqno": 11,
+                "payload_hash": "secret"
+              }
+            }
+          },
+          "csrf_token": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxftDOAAFRgMDEIA8bUlzQnZvTPUFj4y+VUt9whvsam2C3HClE9VPJqNWZ"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:13:42 GMT
+- request:
+    method: post
+    uri: https://keybase.io/_/api/1.0/key/revoke.json
+    body:
+      encoding: UTF-8
+      string: csrf_token=lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOvOAAFRgMDEIN9EVcSYlQT55aj%2BcnieTT8YhPYszpo0trf8xN1XXepy&kid=01015a75e5b8d15966f3517327e1b6cef98bc8316d9f688964315769f57dd6f2437a0a&revocation_type=0
+    headers:
+      Cookie:
+      - guest=lgHZIDI1ZmRlMjZhZGQ5ZTZjNzNlOWQ2Yzg4NmVjN2M3MjA4zlMxgOvOAAFRgMDEID27s4G4rgbr7Q8kINyCbeDXMR3Tk1H%2BEOKFkrsRGnJN;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:23:20
+        GMT; HttpOnly; Secure, session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvOAeEzgNkgNjkxYzlmOWI0ODA2N2IxM2JjN2I5ZDBmMTBlOGE2MDLEIJmFmQo450P8iz0TItrkA33%2Frtwyt9rhdcmpSYjxZ2h4;
+        Max-Age=31536000; Domain=.keybase.io; Path=/; Expires=Wed, 25 Mar 2015 13:13:15
+        GMT; HttpOnly; Secure
+      X-Csrf-Token:
+      - lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOvOAAFRgMDEIN9EVcSYlQT55aj+cnieTT8YhPYszpo0trf8xN1XXepy
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:13:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '228'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "revocation_id": "7e8b13ac9a51528e931b6e0b",
+          "csrf_token": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxftDOAAFRgMDEIA8bUlzQnZvTPUFj4y+VUt9whvsam2C3HClE9VPJqNWZ"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:13:42 GMT
+- request:
+    method: post
+    uri: https://keybase.io/_/api/1.0/key/add.json
+    body:
+      encoding: UTF-8
+      string: is_primary=true&public_key=-----BEGIN+PGP+PUBLIC+KEY+BLOCK-----%0AVersion%3A+Keybase+OpenPGP+v0.1.1%0AComment%3A+https%3A%2F%2Fkeybase.io%2Fcrypto%0A%0AxsFNBFMxgIIBEAC7FgZw%2B9N8h%2Bo6DjhgM4v2IzhxCrTG9rBax9bElr36haI1oomT%0Aqxy6FbsIsqzP85m%2BdRWd7LBNJy5pcr0izzpE15%2B2Ux47fSRLB6mAHZ1Ia5aX3AfI%0A5rbqz6DRoXynGX6fZJrAL7eZOOU%2FxuqYR%2FcgCkQvHdnakgwfnPAQDmsnFA22OPCC%0AJa83laNWmZKQ%2FdaRFdfzRSUkj%2B0t6jgh4dj5BSvtZhpUcIHWnHZs%2F8tOAvTkba%2Bo%0ABLr6syS%2BqjEStqs2RE0JVtgFoCU8WFNs4AaVQndL6LwFDBoK6ybruCPYVGod8kWD%0AoO%2FgbUoV25B%2BEMSQuGvTyF2D%2BKRkXIjJFnRrC28CFhKO%2F%2FChWsNSJQoxRjqZKbGD%0ASOWgtIsXfc1u2PZb2RIU0Q0HGYNlvJsxMopaOTcpu4ldLs18Orwun0a6M5WaoohI%0AC0qA9OBZF1AHv87GZDjz%2FGSjbxkqNY1vuwwllkf4YeEU1nxdOxGRkntv1FGHoAiq%0As%2BzT6WNK2XNM1zBM%2BlUx3UEOxls91u%2BhhMk%2BJKOU26npPJa9LYtqmKc59A57wYkP%0ACP5SSI8kI0UIDy%2F0BZ62RfKJcVgMDuVED0%2FXnmQDQ4Emns2gR0AgfMoEQCR0oe2u%0AC6NlqPFKGwsvyOUtVn4pK8TRisp5pIGP6osetZVk26KM9l%2BIQGcqZrGx%2BQARAQAB%0AzS9rZXliYXNlLmlvL3NlYW5oYW5kbGV5IDxzZWFuaGFuZGxleUBrZXliYXNlLmlv%0APsLBbQQTAQoAFwUCUzGAggIbLwMLCQcDFQoIAh4BAheAAAoJEAerF3XvEm%2BNJ2gP%0A%2FRtHDkIax7N1EDtyicGem4JOgDbl1ig6M0iyGTf5Xl7vA9TWiNlSDF4Mr1kj%2Bwy8%0AjrW71Wg7GNP9dPPwRww75dU%2B%2FNht3nfo1FhPDuaS%2B2jg1DiK%2BHNPaasFIbdmW8Nq%0AWzn5Br4d3JUkMbbFIYG9Knlm5UdJh%2B1an6xszmK5YuzzxUxTRw6O2WOu8gPVk9Lc%0AcwLR7XPPtkvk3pNSjsE91%2BSZW8QyqFjhmAzBbBZT1XVHTmiSwOP2mATz0xWLQRO%2F%0Aq%2B%2Fov8P%2B0%2B4EdqMOh8DyVqFt4oIp8yDAbifBTtjfKqBnuQkCEMzz5deMoMTpN31N%0AnWsrgx4AfQYS2VF%2B1JhwzN1%2FBYAnctcPZLCd2hIrdqEmIVyPUVRbTLTgUxG8pp7O%0A1jwCZ1TeJsIBr4umCtEWZrJEYBGoTH%2BIBDGDMJJnCxJ9VzVpBmgexX0Wf59uf472%0AqdcQZBhPa5rJLVxIFHWWZ0oe7eDlhGJFCk%2FYw2w%2F5WbUKZPQWtMklozFjByGulCB%0AwfV5%2BPhaTPh2ktK9Zh%2Bd%2FJAN7KYvB7aO0HEJa4I%2Fm9Gvj9g3t%2FtV0%2FCM%2BKoE55ah%0ADYuoTMb2S8%2BPMqKDERSTRic70%2BmKROA7ANU8embiy9CgWfDJIl%2F5GvbsSECijWWE%0AY75kiitbvj6AbieBel1T4gw6aAau5d7SXDXBQlmenkmdzsBNBFMxgIIBCAC3B5sd%0AZY%2F2KUYMffKNcmHgz84XA%2BYJbIK62%2FI20fXTsnvCts%2B58luwDdmBeB7UO0uJu8RC%0AzgurkJ5Eh3JwO3JBMIHIaS5GataiRQW1o83jLWQoIlToqVPdT5ElcvI7ILozNqwP%0AE5oYTSbgKETt9iXaGwOhs8X74AapX%2F8sb3ak9NxiC4jWNQgP4yTHW6Xd45MMqLPb%0AawDmWIsmt5WIPIoacGpPMwJ9YSqS%2B0HLfbkPJTKLF%2Focr7Qb99dfv4KlYiAjz19U%0ACKh1aMeO3UVt%2FGVmHnTTJPoy%2F2Hk%2FZU7I06eJASNyam8yG0SM%2FXF0mguL2Z004HY%0ANIwZQigEHAVeiV2jABEBAAHCwoQEGAEKAA8FAlMxgIIFCQ8JnAACGy4BKQkQB6sX%0Ade8Sb43AXSAEGQEKAAYFAlMxgIIACgkQrmPQMI6yLNN9XAf%2BLMdk7qJZv2Snp3Qx%0A5dGwYXbVZgoMrvRaoAUJoI%2FOWPAQxgSNeliJ78C%2BMB5zpcSiwT7Q77AeuW4ppl8D%0AszYIoSxSCUMPS%2FI1c%2FZlceSuohyhzkOXLnZ4IJFDXoGqQhILowADZaaKgMvK4TwT%0AxpwlM1WlvySzJtZiutF6f5HobnpOgOFROE8%2FfGTmY3T7lABmEzgTDpAi%2FpHCE%2F1J%0ApWklnDOVMSAPZe9Uo8m2PDu%2Bwep6O2wYT4nviJaF9PQvrxF%2BLHec4aTl4MF9v19m%0AzdtaR7Tz%2F5wpiMYsuu44UiY7e0shotkzqElOMQVoWV%2FEDfvEzIqyVwjis0jAl4al%0AQ0oOdwInD%2F9RwOz359r8KaFhdZjI3%2BC%2FCds0qP8ugUr41FWdCRm%2F%2BR7Kgiz934%2BB%0AcPXsKaFaQ0S5fQO297sG5TkKoLPm%2Fxi3r9Nz3%2FjbUvXsPBYkOMUOTv1utVmQ%2BCHP%0AH88sgzIYL5LE1d5Ag19%2BnAFUVAPZ2AV9XgpbModq%2BFKNiilsuhcyYlbM9dUvWh1B%0AtP9vGIeYlnBN3bAbUe3V3opiDLycdpPVJcvmoNjY0vxvTNRqJcOSjPC3ZAfpnfjz%0AsYqxTzGgjyrK1YwLcgKn5hvvnq4dtAP6VMNhKfoMOssHsBtVVVKskRbDlM6j7JM9%0A4BjxelECgx%2Fk7iZ%2B%2BqGFcvn92PXel%2FuFKCiAPGn%2FpfbqbzlpJBr24uRlhsthd46G%0AQHWZSYPZRwKUb24Dl2H%2FF4%2Bx9jSKYtRuGKCi6j5gM4qbBPVZevUEbIa9LlvcWwYQ%0A%2F9T7wdZFSrKjWxmBUY4P3tyeuQpoqtNP2eFw23%2FX4yBGyU0jwVy36gxHR%2B0Hi2d4%0AgnoVFcINqTagKdNv%2BALKlzYINASF2hepVeWA9D9TUULhf7OwFLEjQk%2BcWfXOIwjS%0AnS4U62EWN120qkYuPn8xwdDPf9f%2B8gC1mR5stnNlt0Ia08RbG%2FjRxFCofxuT4RLg%0A6mt%2Fptne6aooq9%2FnWWI9BtpVqa7w21VN72MIUVqBt9lBQTOcHNfTzQ%3D%3D%0A%3Dl2sl%0A-----END+PGP+PUBLIC+KEY+BLOCK-----
+    headers:
+      Cookie:
+      - guest=lgHZIDI1ZmRlMjZhZGQ5ZTZjNzNlOWQ2Yzg4NmVjN2M3MjA4zlMxgOvOAAFRgMDEID27s4G4rgbr7Q8kINyCbeDXMR3Tk1H%2BEOKFkrsRGnJN;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:23:20
+        GMT; HttpOnly; Secure, session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvOAeEzgNkgNjkxYzlmOWI0ODA2N2IxM2JjN2I5ZDBmMTBlOGE2MDLEIJmFmQo450P8iz0TItrkA33%2Frtwyt9rhdcmpSYjxZ2h4;
+        Max-Age=31536000; Domain=.keybase.io; Path=/; Expires=Wed, 25 Mar 2015 13:13:15
+        GMT; HttpOnly; Secure
+      X-Csrf-Token:
+      - lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOvOAAFRgMDEIN9EVcSYlQT55aj+cnieTT8YhPYszpo0trf8xN1XXepy
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:13:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '350'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "kid": "01015a75e5b8d15966f3517327e1b6cef98bc8316d9f688964315769f57dd6f2437a0a",
+          "ukbids": {
+            "1": "1e84cc13e87130ca24cfaf6f704f1711"
+          },
+          "self_signed": true,
+          "csrf_token": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxftDOAAFRgMDEIA8bUlzQnZvTPUFj4y+VUt9whvsam2C3HClE9VPJqNWZ"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:13:43 GMT
+- request:
+    method: post
+    uri: https://keybase.io/_/api/1.0/key/add.json
+    body:
+      encoding: UTF-8
+      string: is_primary=true&private_key=hKRib2R5gqRwcml2gqRkYXRhxREuHJTX3gAAAAOmSVL6UJQG3NmzsmtparXQcBGb2zawWCnZBKwoPGwe3YMVXBFzUWWIhqpNw3%2FGP5YA%2F3xs70mMnYvbAKvbmCEDmFpARpDdo6a4XoRgcbiDax3vDZPHSSFoU7nwxesN4w9xx0%2F%2F3WC4OIJhNj6d7cwUxSNB6evuOcedxh1hVurZL2%2FQ1cQi40dX%2BohrKpNWRdHSXZCDuw7EdSRk7rZ46AZs7aH%2BKQPQpp8MLCtMmKGqyhF4J8DciEZp6PVxbJSxnnvikjfyw18Qh8qcHIj1vXI3mcz7gMTOkqAeBAJiRhO2csDdeAqAYNMIcuQc4kfDO2QwgJ3P8k8DN8nCq112NKR1Xv4Mv5rBoJU5WTUWt2wEkBzOk%2FtvV6T312YaZ7bjA2PYgsAObu3WW61woPx7Abi0Bx18cyzYFwXX1b7c%2FmKU4TXc0VUEkHQnAFiQStQOyoa2yxDXNRqEI9xrlmf%2FKtOBnCCyRlNZtzGK79nPbARz1t%2BLeHcM3iOrP2nsC5a49BgBnuzseUVEMduAyf%2B777vGl1o4J1jkdRkCSLG5ruVdsKIo%2BLKbSXUjNcFSA%2Bb4u9kSny3zApPhDLlQ%2FPy9OMa5swOHRS1tCgIBbfJyPWY8FWetim9lZM3rCOy1o%2F3LZYfCNji0OfcE4wjGr8%2Bw07AKUnGTTyPw9G3FrOdFccEGV2ZXXDNTrAnfCgSJGItCMbzCIA%2FYvAPCK6fCD%2FcGZCf1rrobXW9v0iJRNAGdchbiRek7HLkInixE6Zuzf6HqJIDIjFNKFdcjMh2PBYZaN8D7Hb0Fah0KFzTB0Ur2AaUYCCflWMfUQtMyf1F%2BJUzP2uwdLuQju8ESHnTc2BeQjG2vMZcGNTiWe5CYccVFjJX8urzG8QrrTHLeU7EWxvR7tqK0%2FJcNNBVrdxTNtmcTi23v07LdsJPhRArdH0WnHtqk8e6dovtjve%2FvhszY6xQ6jwl4OoG%2FmDx9v9Z5VvarvawAiUZn0dpn0fqPNe%2Bc5dO%2FMolXwJVH11vW496pP1N2oZgOg2VFWmdVEZ7sUcyiMOfOjUnmo3mBDgt4Y1tNZh48R1laxSyJ2IXQIBdBMRp5SLeNA%2FK0VGOGogJ0DAZXCCCz4WL%2BEQgix1A%2Bzmyalyji9lNuACQWonF9Rz%2FAQ1zww%2BdKDqkG0NA2IVPKAekbXMZM1DW5vhQbNHzLI1p0uvTwXZe9mWGyd1vvf9DqGCDQPErOvczi759Cq2ucOCpaBd1pF3PkEDqHm1zMjiaiVpTKhUWc8ZJsgFN4uzO%2BKUSVx5ICHMtGQtO%2BSvPWniWeR0C9ID5IFvzoBvKCpZZtN3s2KGMOsNMv5KMHitF26fiIYUnqolJsz77pjy7RgJzTMRLuVNUjUj2IAOgAVD8VV9FK9riTIhGY7apRHNhKA0oLRxkjC1emCVLzMpCxWYSYDcBE7IG67Sk6WdfXcvfm5%2BERxAPFoDix9HgO1g%2FyL%2B5gVmjcDHiqzXg6ZEMM0PUeezZ9ph5AGhlWTZI6Q1%2Fhpzo5lFUcBosu71Ru4o4JHYeeA10mNRkHVBWZ4U2Q6re%2BGsM0zfmPGGQioIMW18HXnDoFlxGK%2BVNil9I3NuOluj9hE1lhYnoZzAA2WdD4tmvQNs0M%2BefFgePawIcmuzjOEyyYUKZzTqk9dSZW2kUVpt2E4fo7AcAw%2BOEqu8ay2MHmU7d8bL2CcSf8lTp2p5tuMG7z5lYjOdStZ63G38j4ntpDpm62slGi3WSLJoz5FgzLkQurrxQD9shNZLjlhLZ77Xkq%2Bp3O7ybw63YZ5MzJXbvl9s2%2FpoiHOb98OQQHROvpF843GT7LocMPFvItXaugQKxDTqiW2njpH8PqrKdcSInOZu5d3nF0tchADJNJssUEpLqBv65NdykPidcfe6iFKAY7JqWNJp7Hn9PHonu9ihh7uW0FMCnjOji%2BjT6Cc%2FFPsY9BpgxsyVthw9Yx7QJ4Ewg9vEHFuFYBMXP2ih70%2BIqMrZ%2Bf9I81pxreRw0cWBg0FI00%2BDXpZiI2%2BVqFZc7S1IbIuDDMBOQRsbaZ2fI97a8ogzj6LCvu0qzv29A%2FRzxdCCo8oT1Zhz9D1%2BTo999NtSqW11DvQ6wJVhrFwXNh2aJNdFdDjK1BPWMwqWJa9InGE4h%2B%2FsZ%2BdFHQAi5GqzZ%2BeWaXx5S5COjauhy3XoyIz33jS0KlTlDCvet7vq5nM%2BIR%2B%2Be2tKqzqwTbKg7Dr9rM93NZLLFnipSnvvG7%2BWddCFmjjOmBgOusQNK%2BGmF5bksGJiDrZKnDuSQTIlo8cDIRY22gpXHisB8FiUhY1iraIOi7q3gN9MC%2FFeDhAaGUazxlTqqDRfiToKFdCxOswJQ7zaoMF1JHKhQhji1bBzaP3Yw71WrneQr59OZQ4DlXy6V3aTIFfKM8F74X%2FFiagFt5o8P1%2BMXR%2BxR0IHJCYSUy8phTbwzG9Pu2b8Daz0g8ElKxh%2B%2FO9rrDoG6jqSeGTB6EiJ95ritXNt6HADXIO0npeoVd6Igt5XCx3tEdkFAGd8BkLYdBZYMTQ3q%2BlEpc3NFMPl1YARxy5yLNIkFaEZbNkFCaPAL7DtL3Xh%2FfL0BgSmWrNtrRP9YcxbTqxMj3Kltgu4lk%2BqMdr7cfJaU5A92a3aApyU8x9i2kqE%2BBH2yZ5ywTXUXZcHm%2F0fqeORXMbQSmaqU2aWVnlOyKyjPpNFMKGCGdAC6of0dHKsGTEF2Luo%2Fzhai4%2BtMsZnE7TnQI4mGUPvlIzgolAuccPeSAbEQdaImeN2gBUZEBFU%2BoIbQZKduP%2BfrJW7CeInN3qJV2asMBnxT7B6UtinfQs534xhpHfvJpdA6arGPtqLRZv5m2lXUq97VeBN64%2B369RzKDm5cMl%2FTVhIlE4VPv7HXmXHIbmF%2BrkGYoBZX1q%2FxtjL3dz8lXztcKYeM9UOtx%2BUvaQvLs2zVuLgx97DieXLQqgyvktIskXJci4ya%2FOrghiViKHxC9zkSSUVun7sW6rhM%2BESSvHnkUeo%2F10Hz%2F3KZpzq2gSFCUFGVNw5yj6L%2FKaVBFev4JKlKFZAiARevLdSnIeLaA1rwWHzIj3N4Mso6hw%2F9qNTx0TdfURFLLvmRdwEkaOFREopB852jp5Ow2%2BT%2FYnpeeVv%2FKkPk4emuRsseKQeDTEtVqUUCwcRNtwusoUEv2bPkQTejtYIZgJ8g18khmdTTGkOjETnt0DSrKrNve2EG2QYM0C5NRfyyDTLMs64RuxccWxeAGqBH17h9vjmpDbDC1JBV%2BlGQVYjCimXPqL0jivFKfOeNZvwfUXcfcUQz0pT1JzQwgZQBP4APQH1ryQeObu%2FG10X0XHi9so%2F30PKKunHs%2FViI45VxQxPZQFHREetzYMe4uDVxvz7sit5QyQwawTl1AD7bVeoXJd8CfiyZdI816Q12hPXrqSC3xAEilMxh2j4el9iRzX5AeFs1HoueGMKS%2F8XhIlrxE77FwokzCKMPyUny0G3R2VqKxjoQizdkoufhNATFDpYBJhUIv%2B8hVydBRzabCsXt7h%2F9N%2Bt4e%2FD9LXdFLnuAIwwA3aLDSIeqlCJ2lIP%2FoSE1Yl2zldNd1XIs40QyecS9czQaPAP2JD0cw0IIx5t5UkChOEunm%2Fg1QlJWx7w2ERIWKfER18iyUcS%2Frv3j9FTnZp3dThan7z4W0iYTQU42fDMtltQV8Qen9LBQt7ibJMfO3IwE7TkOAhsjDrcaqSjDTZNbyEOJvqXjI7PR21Z9h9fZXJgdyHKUbHpm%2BNrvJUzVash9jz3vv3DJv5b8R4y8O7MaeqXYCqkCDaCa6HBIa3ylKjpXKzpKtA5%2FBmjq5H1gsdPqY%2F8FSKiwdicjRz5Wmk7hlyu%2BiA1Q%2Bdpc6zSuIS7ZrReGj3DJ8JWeqaL5NFhJrfORq7sj5Kqq0UEAwsz%2BRTeLv5QYUMKgpWj2N6hUo4Q9MQPfi1xCNxzYWQJUcAhGHZI42l70VX%2BSsy9jVlUay6kFYqUtmAbF05LlHzSHp8rcuZ4HFDxUyyYrIh1evpvIiInc6oGV1yXRp%2B2slOXiDyxoT0DRsnh10l06JyXnEyclMf3amrTF6TAWnRclcRO8cIWCt2Fs8%2Bxl538SseLwKMiwRjZgaKUhutfNbeD4hxn9TG8Ohd96mTIKNXqkm%2FInXuDRiEkflRfwsjeXynWvfrY6GeS725d6R2Cbq3RSLuMTyaJvE6WGLzSqJs2%2FmLcFOeIkysuhW1gTYBowp%2FJDIAQFEln83D%2F0zvF%2FJJbSi80pcSsBnoLCq4O%2FUNndk%2FLz48J2HzkgB%2F8%2BOHlatMIkSxdUAexjl%2FgQnpvLN3OQ8OSL%2BzN%2Fdxmxw0Juxoy8VBTt%2FXz4PAUAumSOPOrlA708fM%2FMO9ZM3HlDY5UqmV1bOWPV5eDuXdeScSRr9869REj8Vo8WHEAEjMbCaEsDDZcdXrR%2BtjhhCbeGgv71negBEMjYtTpiVWYGBqZyG2vT8tRLMDEWZuyJXlXx8Tf70FqJ%2BjdkJO0uOMLZ3bf8uJaFqSV8fIEFdGZiubbT94ofZcUEuONWtKs3WuMxTWCDxMbMH7HlcCag7Vnf6OHgn2OxX24l3Tv2LRr7Pf6J%2FJcjks1kjWMtv%2FYg51mVPS%2FoTDkGaYUF5v4R1VJd4Ni8939FnRzjVgoKU8jMTkHdn3pk6W9Xo29Iuo72m4wM3GyGv1wSlgnP6eTkkSFyOztgBW2UXZxxNO6iK8rGTorhMJoY%2FBtN6U6B5LMqjSKnxb5Hp1%2F%2FmH7SFMxhtq3OVG2MYr8Bt6M6UP8ZnWShk9ybuLuQAIhH2%2BR6487ba83Uu2XTOky1dysgtve%2F2rqbKQMETAzbmQ%2BGxnkn5g1sqw%2FtCbl4cfg3PHIVCGB4PNtX1POMC%2Bt3POWGzRTWaF14lZeciE1OsEKZATJIyRQcvl12n3wzMnLkVrcrL2kxKk5V0hU6MJCHBYG7oYRt2wEjJ4BfjSBN5wr8eIXu%2BCHAp%2BRQ14NCuhykyCAco%2FVigTxIhEV8HIRbwNXwFHVtQuBpI98Ovj1HYIq5L%2FTOrdvrXOqooBHaewnFqSnJ3B8ygnwJjgLCzUHKjIN5TQ7CmRJxvoxDEgMxcL2HyE7t1N%2BUrtFinZDe2ruTOAYZXlFZGIetgggnkx%2BbR%2F5SH%2Fr0hJfhOa7NylWfJ9BYhJ8BuvNQ%2BJ%2FD2ISMnQxAsR4XWABWr%2BnSGqgMReQPgB4KjvU0Qu28mIi5dvEU7en%2FFOnF5%2F8ZZ9XkROP60EyMDmpCpFUmyjveRuxeg75EAJMVXASnTWhMs1%2BOQg%2BawTIc9EiXLNpAgximjYGqJRZvrYWT7wAcLHLO%2Fo0BmwqQoCE4TyOJOQ7eR9IyEMlh1HPv4PzTPgqdXPvxB8MXDwdB3RHuyae%2F5rYQINmWMAabGt%2BRlOVgJYVmgRy3Ifou2iIlOzeJzqFvxUhYgyZ8VhDcSTW%2FKIrKyX1x2vQ6AdFv3NAgAcsn%2FHqHR5iBeU4ZnVK%2FaNDLVecjuNfxwmprVQksmvkz3OIYVm4z%2Fap%2BNeBBN1V6vNvV9kEhyJxBJmg%2FuATZg1qsc%2F6dsLEGOlbZK34XBB%2FYYS0Ev1UNS4EQ49HQLO5YXZJZ8qxYnfCBKrzcgKci22g1ErCvmPqnOBpz0v24v%2FX30aOw%2FzAlYwKU1nZGGffFgNOL0WLOU1dgZrogKv%2FtSeJtc%2F1fgN3V45lUmNOoJ5Hf2kyKBZ7tdgRqZsl4tswoO0vzTc1jgkGksFq2Rud%2BJO1Y7t75OnZ3ypdp3fUFYKAFDvkzCAXUr8XpN3g%2FNGEE%2Fzj8U93e7F%2BYEBGyGPyZ6f94YhMBr9rb8HOpEXqbseC2w5b6EYHtQghqcc4Zfvw7ghp2P3yUx4Rnij%2BKCMLaUoON6Wycb64Uixr7ST%2BhvqmVuY3J5cHRpb24Do3B1YsUIyMbBTQRTMYCCARAAuxYGcPvTfIfqOg44YDOL9iM4cQq0xvawWsfWxJa9%2BoWiNaKJk6scuhW7CLKsz%2FOZvnUVneywTScuaXK9Is86RNeftlMeO30kSwepgB2dSGuWl9wHyOa26s%2Bg0aF8pxl%2Bn2SawC%2B3mTjlP8bqmEf3IApELx3Z2pIMH5zwEA5rJxQNtjjwgiWvN5WjVpmSkP3WkRXX80UlJI%2FtLeo4IeHY%2BQUr7WYaVHCB1px2bP%2FLTgL05G2vqAS6%2BrMkvqoxErarNkRNCVbYBaAlPFhTbOAGlUJ3S%2Bi8BQwaCusm67gj2FRqHfJFg6Dv4G1KFduQfhDEkLhr08hdg%2FikZFyIyRZ0awtvAhYSjv%2FwoVrDUiUKMUY6mSmxg0jloLSLF33Nbtj2W9kSFNENBxmDZbybMTKKWjk3KbuJXS7NfDq8Lp9GujOVmqKISAtKgPTgWRdQB7%2FOxmQ48%2Fxko28ZKjWNb7sMJZZH%2BGHhFNZ8XTsRkZJ7b9RRh6AIqrPs0%2BljStlzTNcwTPpVMd1BDsZbPdbvoYTJPiSjlNup6TyWvS2LapinOfQOe8GJDwj%2BUkiPJCNFCA8v9AWetkXyiXFYDA7lRA9P155kA0OBJp7NoEdAIHzKBEAkdKHtrgujZajxShsLL8jlLVZ%2BKSvE0YrKeaSBj%2BqLHrWVZNuijPZfiEBnKmaxsfkAEQEAAc0va2V5YmFzZS5pby9zZWFuaGFuZGxleSA8c2VhbmhhbmRsZXlAa2V5YmFzZS5pbz7CwW0EEwEKABcFAlMxgIICGy8DCwkHAxUKCAIeAQIXgAAKCRAHqxd17xJvjSdoD%2F0bRw5CGsezdRA7conBnpuCToA25dYoOjNIshk3%2BV5e7wPU1ojZUgxeDK9ZI%2FsMvI61u9VoOxjT%2FXTz8EcMO%2BXVPvzYbd536NRYTw7mkvto4NQ4ivhzT2mrBSG3ZlvDals5%2BQa%2BHdyVJDG2xSGBvSp5ZuVHSYftWp%2BsbM5iuWLs88VMU0cOjtljrvID1ZPS3HMC0e1zz7ZL5N6TUo7BPdfkmVvEMqhY4ZgMwWwWU9V1R05oksDj9pgE89MVi0ETv6vv6L%2FD%2FtPuBHajDofA8lahbeKCKfMgwG4nwU7Y3yqgZ7kJAhDM8%2BXXjKDE6Td9TZ1rK4MeAH0GEtlRftSYcMzdfwWAJ3LXD2SwndoSK3ahJiFcj1FUW0y04FMRvKaeztY8AmdU3ibCAa%2BLpgrRFmayRGARqEx%2FiAQxgzCSZwsSfVc1aQZoHsV9Fn%2Bfbn%2BO9qnXEGQYT2uayS1cSBR1lmdKHu3g5YRiRQpP2MNsP%2BVm1CmT0FrTJJaMxYwchrpQgcH1efj4Wkz4dpLSvWYfnfyQDeymLwe2jtBxCWuCP5vRr4%2FYN7f7VdPwjPiqBOeWoQ2LqEzG9kvPjzKigxEUk0YnO9PpikTgOwDVPHpm4svQoFnwySJf%2BRr27EhAoo1lhGO%2BZIorW74%2BgG4ngXpdU%2BIMOmgGruXe0lw1wUJZnp5Jnc7ATQRTMYCCAQgAtwebHWWP9ilGDH3yjXJh4M%2FOFwPmCWyCutvyNtH107J7wrbPufJbsA3ZgXge1DtLibvEQs4Lq5CeRIdycDtyQTCByGkuRmrWokUFtaPN4y1kKCJU6KlT3U%2BRJXLyOyC6MzasDxOaGE0m4ChE7fYl2hsDobPF%2B%2BAGqV%2F%2FLG92pPTcYguI1jUID%2BMkx1ul3eOTDKiz22sA5liLJreViDyKGnBqTzMCfWEqkvtBy325DyUyixf6HK%2B0G%2FfXX7%2BCpWIgI89fVAiodWjHjt1FbfxlZh500yT6Mv9h5P2VOyNOniQEjcmpvMhtEjP1xdJoLi9mdNOB2DSMGUIoBBwFXoldowARAQABwsKEBBgBCgAPBQJTMYCCBQkPCZwAAhsuASkJEAerF3XvEm%2BNwF0gBBkBCgAGBQJTMYCCAAoJEK5j0DCOsizTfVwH%2FizHZO6iWb9kp6d0MeXRsGF21WYKDK70WqAFCaCPzljwEMYEjXpYie%2FAvjAec6XEosE%2B0O%2BwHrluKaZfA7M2CKEsUglDD0vyNXP2ZXHkrqIcoc5Dly52eCCRQ16BqkISC6MAA2WmioDLyuE8E8acJTNVpb8ksybWYrrRen%2BR6G56ToDhUThPP3xk5mN0%2B5QAZhM4Ew6QIv6RwhP9SaVpJZwzlTEgD2XvVKPJtjw7vsHqejtsGE%2BJ74iWhfT0L68Rfix3nOGk5eDBfb9fZs3bWke08%2F%2BcKYjGLLruOFImO3tLIaLZM6hJTjEFaFlfxA37xMyKslcI4rNIwJeGpUNKDncCJw%2F%2FUcDs9%2Bfa%2FCmhYXWYyN%2FgvwnbNKj%2FLoFK%2BNRVnQkZv%2FkeyoIs%2Fd%2BPgXD17CmhWkNEuX0Dtve7BuU5CqCz5v8Yt6%2FTc9%2F421L17DwWJDjFDk79brVZkPghzx%2FPLIMyGC%2BSxNXeQINffpwBVFQD2dgFfV4KWzKHavhSjYopbLoXMmJWzPXVL1odQbT%2FbxiHmJZwTd2wG1Ht1d6KYgy8nHaT1SXL5qDY2NL8b0zUaiXDkozwt2QH6Z3487GKsU8xoI8qytWMC3ICp%2BYb756uHbQD%2BlTDYSn6DDrLB7AbVVVSrJEWw5TOo%2ByTPeAY8XpRAoMf5O4mfvqhhXL5%2Fdj13pf7hSgogDxp%2F6X26m85aSQa9uLkZYbLYXeOhkB1mUmD2UcClG9uA5dh%2FxePsfY0imLUbhigouo%2BYDOKmwT1WXr1BGyGvS5b3FsGEP%2FU%2B8HWRUqyo1sZgVGOD97cnrkKaKrTT9nhcNt%2F1%2BMgRslNI8Fct%2BoMR0ftB4tneIJ6FRXCDak2oCnTb%2FgCypc2CDQEhdoXqVXlgPQ%2FU1FC4X%2BzsBSxI0JPnFn1ziMI0p0uFOthFjddtKpGLj5%2FMcHQz3%2FX%2FvIAtZkebLZzZbdCGtPEWxv40cRQqH8bk%2BES4Oprf6bZ3umqKKvf51liPQbaVamu8NtVTe9jCFFagbfZQUEznBzX082kaGFzaIKkdHlwZQildmFsdWXEIF09HhPpsId%2F7iHsFCnktP4xmI76BX5ILf2accRdk0F3o3RhZ80CAad2ZXJzaW9uAQ%3D%3D
+    headers:
+      Cookie:
+      - guest=lgHZIDI1ZmRlMjZhZGQ5ZTZjNzNlOWQ2Yzg4NmVjN2M3MjA4zlMxgOvOAAFRgMDEID27s4G4rgbr7Q8kINyCbeDXMR3Tk1H%2BEOKFkrsRGnJN;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:23:20
+        GMT; HttpOnly; Secure, session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxgOvOAeEzgNkgNjkxYzlmOWI0ODA2N2IxM2JjN2I5ZDBmMTBlOGE2MDLEIJmFmQo450P8iz0TItrkA33%2Frtwyt9rhdcmpSYjxZ2h4;
+        Max-Age=31536000; Domain=.keybase.io; Path=/; Expires=Wed, 25 Mar 2015 13:13:15
+        GMT; HttpOnly; Secure
+      X-Csrf-Token:
+      - lgHZIDVhMDMwZmZlMTk3YjIwOWU2MDM2MGFkYTg4M2UwYTA4zlMxgOvOAAFRgMDEIN9EVcSYlQT55aj+cnieTT8YhPYszpo0trf8xN1XXepy
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:13:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '350'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "kid": "01015a75e5b8d15966f3517327e1b6cef98bc8316d9f688964315769f57dd6f2437a0a",
+          "ukbids": {
+            "2": "950b0537bdecf3706da0269cb246af11"
+          },
+          "self_signed": true,
+          "csrf_token": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxftDOAAFRgMDEIA8bUlzQnZvTPUFj4y+VUt9whvsam2C3HClE9VPJqNWZ"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:13:43 GMT
+recorded_with: VCR 2.8.0

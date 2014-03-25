@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://keybase.io/_/api/1.0/user/lookup.json?username=d8dw9sfu83u39229i9fewdsi0-fdsii-i
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Sun, 16 Mar 2014 19:58:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '160'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+      Etag:
+      - "\"1429877151\""
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 100,
+            "desc": "missing or invalid input",
+            "fields": {
+              "username": "invalid name"
+            },
+            "name": "INPUT_ERROR"
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Mar 2014 19:59:05 GMT
+recorded_with: VCR 2.8.0

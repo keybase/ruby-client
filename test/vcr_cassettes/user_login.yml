@@ -1,0 +1,176 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://keybase.io/_/api/1.0/getsalt.json?email_or_username=seanhandley
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:05:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '428'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - guest=lgHZIDA0MmNjYWYwMTMxZmZlZDNiZGE1MDAyM2M3ZGEzNzA4zlMxfzfOAAFRgMDEICcDJkfb9Dx%2B3zOwXf0uinslHFcRbVhcblMfROqL7d8%2B;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:16:04
+        GMT; HttpOnly; Secure
+      Expires:
+      - "-1"
+      Cache-Control:
+      - must-revalidate, private
+      Etag:
+      - "\"-995079555\""
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "guest_id": "042ccaf0131ffed3bda50023c7da3708",
+          "salt": "a64952fa509406dcd9b3b26b696ab5d0",
+          "login_session": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxfzfNASzAxCDt2SoFRFcwv131WjjMslvJldcxobU5ZdG+6OvX86uq5A==",
+          "pwh_version": 3,
+          "csrf_token": "lgHZIDA0MmNjYWYwMTMxZmZlZDNiZGE1MDAyM2M3ZGEzNzA4zlMxfzfOAAFRgMDEIPBYxx9HWUnY8GVK2rYzx29hOQW5DXDNkONntT1FjGxI"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:06:25 GMT
+- request:
+    method: post
+    uri: https://keybase.io/_/api/1.0/login.json
+    body:
+      encoding: UTF-8
+      string: email_or_username=seanhandley&hmac_pwh=9c1b51658ab062c506ebcebc981831f77f468c793cf0d4a83e731e1bbaa49a5e1dce96c47d5ce3068c620e51f0a23d4945d4b6b30c59fada6976c487c59a0742&login_session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxfzfNASzAxCDt2SoFRFcwv131WjjMslvJldcxobU5ZdG%2B6OvX86uq5A%3D%3D
+    headers:
+      X-Csrf-Token:
+      - lgHZIDA0MmNjYWYwMTMxZmZlZDNiZGE1MDAyM2M3ZGEzNzA4zlMxfzfOAAFRgMDEIPBYxx9HWUnY8GVK2rYzx29hOQW5DXDNkONntT1FjGxI
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.3
+      Date:
+      - Tue, 25 Mar 2014 13:06:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '14298'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - guest=lgHZIGJkM2E1MGNmMjBjNmQ0MzQwMmFhMDI4Mjc4YzJiZjA4zlMxfzjOAAFRgMDEINQblgb3pKa15JV58bI2VqKfWGvPFe3qcLUuq153%2Be7C;
+        Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Tue, 25 Mar 2014 13:16:04
+        GMT; HttpOnly; Secure
+      - session=lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxfzjOAeEzgNkgODViZmU1ZGI4MzM3NzM4NDk2MDRmZGIzOWZkM2UxMDLEII%2B6%2FmdEgDo74uwb%2BQDMrDt6m06NFhs0eQjX9popcagO;
+        Max-Age=31536000; Domain=.keybase.io; Path=/; Expires=Wed, 25 Mar 2015 13:06:00
+        GMT; HttpOnly; Secure
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": {
+            "code": 0,
+            "name": "OK"
+          },
+          "guest_id": "bd3a50cf20c6d43402aa028278c2bf08",
+          "session": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxfzjOAeEzgNkgODViZmU1ZGI4MzM3NzM4NDk2MDRmZGIzOWZkM2UxMDLEII+6/mdEgDo74uwb+QDMrDt6m06NFhs0eQjX9popcagO",
+          "uid": "e720f5a4cce9c60f94538d30959e7100",
+          "me": {
+            "id": "e720f5a4cce9c60f94538d30959e7100",
+            "basics": {
+              "username": "seanhandley",
+              "ctime": 1394719469,
+              "mtime": 1394719469,
+              "id_version": 11,
+              "track_version": 9,
+              "last_id_change": 1395752675,
+              "salt": "a64952fa509406dcd9b3b26b696ab5d0"
+            },
+            "invitation_stats": {
+              "available": 0,
+              "used": 8,
+              "power": 8,
+              "open": 0
+            },
+            "profile": {
+              "mtime": 1394830113,
+              "full_name": "Sean Handley",
+              "location": "Manchester, UK",
+              "bio": "I use open source languages, technologies and systems to solve problems."
+            },
+            "emails": {
+              "primary": {
+                "email": "dude@testing.com",
+                "is_verified": 1
+              }
+            },
+            "public_keys": {
+              "primary": {
+                "kid": "010170cb70407fabc41c72a03201b061c895f7c2b478d613aeb28f5a52f4725674000a",
+                "key_type": 1,
+                "bundle": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v0.1.1\nComment: https://keybase.io/crypto\n\n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\n=Iq71\n-----END PGP PUBLIC KEY BLOCK-----",
+                "mtime": 1395752675,
+                "ctime": 1395752675,
+                "ukbid": "3200ab8dff3054fb0b2f92572c9bbc11",
+                "key_fingerprint": "5a92216efbf5802ee8e77bc4388b381109627697"
+              }
+            },
+            "private_keys": {
+              "primary": {
+                "kid": "010170cb70407fabc41c72a03201b061c895f7c2b478d613aeb28f5a52f4725674000a",
+                "key_type": 2,
+                "bundle": "secret",
+                "mtime": 1395752675,
+                "ctime": 1395752675
+              }
+            },
+            "sigs": {
+              "last": {
+                "sig_id": "08409d3257bbd7f4c01a009b05dccf93f2fe7fcc113df9929b71616a2a5346300f",
+                "seqno": 11,
+                "payload_hash": "f1014d7a49f12733aab197ca6d9f7957424df16c5bc27590d7549813139ba5cd"
+              }
+            }
+          },
+          "csrf_token": "lgHZIGU3MjBmNWE0Y2NlOWM2MGY5NDUzOGQzMDk1OWU3MTAwzlMxftDOAAFRgMDEIA8bUlzQnZvTPUFj4y+VUt9whvsam2C3HClE9VPJqNWZ"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Mar 2014 13:06:26 GMT
+recorded_with: VCR 2.8.0
