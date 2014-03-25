@@ -91,23 +91,6 @@ module Keybase
       end
     end
     
-    # 
-    # 1    def post_auth(sig)
-    #       Request::Sig.post_auth(basics.username, sig)
-    #     end
-    # 
-    # 1    def add_public_key(key)
-    #       Request::Key.add(public_key: key)
-    #     end
-    # 
-    # 1    def add_private_key(key)
-    #       Request::Key.add(private_key: key)
-    #     end
-    # 
-    # 1    def revoke_key(kid)
-    #       Request::Key.revoke(kid)
-    #     end
-    
     def test_post_auth_calls_correct_methods
       args = lambda {|username, sig|
         assert_equal @user.basics.username, username
